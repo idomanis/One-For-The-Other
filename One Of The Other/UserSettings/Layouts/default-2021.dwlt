@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 14756
+  controlID: 21720
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 14748
+  controlID: 21721
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 14757
+  controlID: 21695
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -429,8 +429,8 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
-      snapOffsetDelta: {x: -100, y: -25.600006}
+      snapOffset: {x: -100, y: -25.600006}
+      snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 3
       id: Tool Settings
       index: 0
@@ -451,7 +451,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 1
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: unity-scene-view-toolbar
@@ -506,7 +506,7 @@ MonoBehaviour:
       floating: 0
       collapsed: 0
       displayed: 0
-      snapOffset: {x: 0, y: 0}
+      snapOffset: {x: 0, y: 24.8}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
       id: Scene View/Camera
@@ -621,9 +621,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.0529246, y: 12.074926, z: 35.209236}
+    m_Target: {x: 4.106728, y: 1.820555, z: -6.533018}
     speed: 2
-    m_Value: {x: -5.0529246, y: 12.074926, z: 35.209236}
+    m_Value: {x: 4.106728, y: 1.820555, z: -6.533018}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -670,13 +670,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.123923436, y: 0.1457142, z: 0.019338405, w: -0.9817901}
+    m_Target: {x: 0.05919887, y: -0.43490806, z: 0.028473914, w: 0.898618}
     speed: 2
-    m_Value: {x: 0.12384009, y: 0.14712232, z: 0.019515729, w: -0.9811411}
+    m_Value: {x: -0.059198875, y: 0.4349081, z: -0.028473914, w: -0.898618}
   m_Size:
-    m_Target: 12.287797
+    m_Target: 1.2562032
     speed: 2
-    m_Value: 12.287797
+    m_Value: 1.2562032
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -759,7 +759,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -20730
+  m_LastSelectedObjectID: 32610
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -793,7 +793,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 00f9ffff30fbffff86600000aa600000bc600000
+      m_ExpandedIDs: e43effff148bffffd8a1ffff60aeffffbeb3ffff94b5ffff4eb6ffff5eb9ffff10bbffffe8d5ffff36f9ffffbcf9ffffbef9ffff32fbffff5e6300006c6d0000c6770000ca7700005e7f0000627f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -858,7 +858,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/Player_Scripts
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 0
@@ -873,7 +873,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 7e6d0000
     m_LastClickedID: 28030
-    m_ExpandedIDs: ffffffff000000008e5e0000905e0000925e0000945e0000965e0000985e00009a5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000
+    m_ExpandedIDs: 9a89ffffffffffff000000005a6000005c6000005e60000060600000626000006460000066600000686000006a6000006e60000070600000726000006261000076800000888000008c800000448500004c8500005485000060850000b0850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -901,7 +901,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff000000008e5e0000905e0000925e0000945e0000965e0000985e00009a5e00009e5e0000a05e0000a25e0000a45e0000a65e0000a85e0000
+    m_ExpandedIDs: 9a89ffffffffffff000000005a6000005c6000005e60000060600000626000006460000066600000686000006a6000006e60000070600000726000006261000076800000888000008c800000448500004c8500005485000060850000b0850000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

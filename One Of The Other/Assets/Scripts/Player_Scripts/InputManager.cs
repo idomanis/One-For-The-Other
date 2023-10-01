@@ -18,8 +18,10 @@ public class InputManager : MonoBehaviour
         onFootAct = pl.OnFoot;
         Motor = GetComponent<PlayerMotor>();
         onFootAct.Jump.performed += ctx => Motor.Jump();
-        onFootAct.Sprint.started += ctx => Motor.Sprint(true);
-        onFootAct.Sprint.canceled += ctx => Motor.Sprint(false);
+        onFootAct.Sprint.started += ctx => Motor.MovementSpeed(false, true);
+        onFootAct.Sprint.canceled += ctx => Motor.MovementSpeed(false, false);
+        onFootAct.Sneak.started += ctx => Motor.MovementSpeed(true, false);
+        onFootAct.Sneak.canceled += ctx => Motor.MovementSpeed(false, false);
         onFootAct.Leave.started += ctx => Application.Quit();
         look = GetComponent<PlayerLook>();
     }

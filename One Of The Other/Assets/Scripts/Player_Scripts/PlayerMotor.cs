@@ -53,9 +53,14 @@ public class PlayerMotor : MonoBehaviour
         }
     }
 
-    public void Sprint(bool sprinting)
+    public void MovementSpeed(bool sneaking, bool sprinting)
     {
-        if (sprinting) {Speed = 10;}
-        else if(!sprinting) {Speed = 5;}
+        if(isGrounded)
+        {
+            if (sneaking & sprinting) {Speed = 5;}
+            else if (sneaking & !sprinting) {Speed = 2.5f;}
+            else if (!sneaking & !sprinting) {Speed = 5;}
+            else if (!sneaking & sprinting) {Speed = 10;}
+        }
     }
 }

@@ -80,6 +80,15 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Sneak"",
+                    ""type"": ""Button"",
+                    ""id"": ""53cf036e-0691-43b9-a70e-9291363d8ccc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -245,6 +254,17 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Leave"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a03a8ea-4aba-4f0e-8995-94549a082ca1"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Sneak"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -777,6 +797,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         m_OnFoot_Sprint = m_OnFoot.FindAction("Sprint", throwIfNotFound: true);
         m_OnFoot_Interact = m_OnFoot.FindAction("Interact", throwIfNotFound: true);
         m_OnFoot_Leave = m_OnFoot.FindAction("Leave", throwIfNotFound: true);
+        m_OnFoot_Sneak = m_OnFoot.FindAction("Sneak", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -854,6 +875,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
     private readonly InputAction m_OnFoot_Sprint;
     private readonly InputAction m_OnFoot_Interact;
     private readonly InputAction m_OnFoot_Leave;
+    private readonly InputAction m_OnFoot_Sneak;
     public struct OnFootActions
     {
         private @PlayerInput m_Wrapper;
@@ -864,6 +886,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         public InputAction @Sprint => m_Wrapper.m_OnFoot_Sprint;
         public InputAction @Interact => m_Wrapper.m_OnFoot_Interact;
         public InputAction @Leave => m_Wrapper.m_OnFoot_Leave;
+        public InputAction @Sneak => m_Wrapper.m_OnFoot_Sneak;
         public InputActionMap Get() { return m_Wrapper.m_OnFoot; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -891,6 +914,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Leave.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnLeave;
                 @Leave.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnLeave;
                 @Leave.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnLeave;
+                @Sneak.started -= m_Wrapper.m_OnFootActionsCallbackInterface.OnSneak;
+                @Sneak.performed -= m_Wrapper.m_OnFootActionsCallbackInterface.OnSneak;
+                @Sneak.canceled -= m_Wrapper.m_OnFootActionsCallbackInterface.OnSneak;
             }
             m_Wrapper.m_OnFootActionsCallbackInterface = instance;
             if (instance != null)
@@ -913,6 +939,9 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
                 @Leave.started += instance.OnLeave;
                 @Leave.performed += instance.OnLeave;
                 @Leave.canceled += instance.OnLeave;
+                @Sneak.started += instance.OnSneak;
+                @Sneak.performed += instance.OnSneak;
+                @Sneak.canceled += instance.OnSneak;
             }
         }
     }
@@ -1030,6 +1059,7 @@ public partial class @PlayerInput : IInputActionCollection2, IDisposable
         void OnSprint(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
         void OnLeave(InputAction.CallbackContext context);
+        void OnSneak(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {
